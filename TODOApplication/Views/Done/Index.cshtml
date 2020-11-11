@@ -1,0 +1,30 @@
+﻿@using TODOApplication.Models.EntityFramework
+@model List<Content>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<hr />
+<h2>Tamamlanan Etkinlikler</h2>
+<table class="table table-bordered" id="tblContentsDone">
+    <thead>
+        <tr>
+            <th>Tarih</th>
+            <th>İçerik</th>
+            <th>Durum</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var content in Model)
+        {
+        <tr>
+            <td>@content.Date.Value.ToShortDateString()</td>
+            <td>@content.Message</td>
+            <td><a class="btn btn-success" aria-disabled="true">Tamamlandı</a></td>
+            <td><a class="btn btn-warning btnContentSilDone" data-id="@content.Id">Sil</a></td>
+        </tr>
+        }
+
+    </tbody>
+</table>

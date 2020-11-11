@@ -1,0 +1,27 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("TODO Application", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Today", "Index", "Today")</li>
+                <li>@Html.ActionLink("This Week", "Index", "Week")</li>
+                <li>@Html.ActionLink("This Month", "Index", "Month")</li>
+                <li>@Html.ActionLink("Past", "Index", "Done")</li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li>@Html.ActionLink("Çıkış Yap", "Logout", "Security")</li>
+                }
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
