@@ -472,6 +472,7 @@
     <Content Include="Views\Week\WeekContentForm.cshtml" />
     <Content Include="Views\Done\Index.cshtml" />
     <Content Include="Views\Kullanici\SignIn.cshtml" />
+    <Content Include="SQLDatabase\TODOdb.dacpac" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
